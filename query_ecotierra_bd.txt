@@ -1,0 +1,10 @@
+CREATE DATABASE `maps_ecotierra`;
+
+use `maps_ecotierra`;
+
+CREATE TABLE map_coordenadas  (
+  `id_marker` int(11) NOT NULL AUTO_INCREMENT,
+  `longitud` float(50) NOT NULL,
+  `latitud` float(50) NOT NULL,
+  PRIMARY KEY (`id_marker`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
