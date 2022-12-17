@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'maps'], function ($router) {
-    Route::delete('deleteMarker', [mapsController::class, 'deleteMarker']);
+    Route::post('deleteMarker', [mapsController::class, 'deleteMarker']);
     Route::get('getMarkerById', [mapsController::class, 'getMarkerById']);
     Route::post('editMarker', [mapsController::class, 'editMarker']);
     Route::post('addMarker', [mapsController::class, 'addMarker']);

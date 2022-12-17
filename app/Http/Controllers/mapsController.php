@@ -15,7 +15,7 @@ class mapsController extends Controller
         try {
             $insertMarker = [
                 'latitud' => +$request->lat,
-                'longitud' => $request->lon
+                'longitud' => +$request->lon
             ];
             mapsModel::insert($insertMarker);
             return response()->json(['status' => 1]);
@@ -34,7 +34,7 @@ class mapsController extends Controller
     public function deleteMarker(Request $request)
     {
         try {
-            $response = mapsModel::find($request->id_marker)->delete();
+            mapsModel::where('id_marker', $request->id_marker)->delete();
             return response()->json(['status' => 1]);
         } catch (\Throwable $th) {
             return response()->json(['status' => 0, 'message' => $th]);
@@ -45,8 +45,8 @@ class mapsController extends Controller
     public function editMarker(Request $request)
     {
         try {
-            $res = mapsModel::where('id_marker', $request->id_marker)->update(['latitud' => $request->lat, 'longitud' => $request->lon]);
-            return response()->json(['stauts' => 1, 'message' => $res]);
+            mapsModel::where('id_marker', $request->id_marker)->update(['latitud' => +$request->lat, 'longitud' => +$request->lon]);
+            return response()->json(['status' => 1]);
         } catch (\Throwable $th) {
             return response()->json(['stauts' => 0, 'message' => $th]);
         }
