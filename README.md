@@ -15,7 +15,7 @@ Composer version 2.3.10
 
 ## Instalaciones
 
-CMD -> ingresas al proyecto back ejecutas los siguientes comandos *composer install* y *composer remove laravel/sanctum*
+CMD -> ingresas al proyecto back ejecutas los siguientes comandos `*composer install*` y `*composer remove laravel/sanctum*`
 
 ## Levantar servidor
 
