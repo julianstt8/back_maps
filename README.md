@@ -1,6 +1,6 @@
 # BACKEND LARAVEL
 
-# Query base de datos
+# Query base de datos ó migracion laravel
 
 Se puede realizar la migracion (php aritsan migrate:fresh --seed) ó ejecutar el query se encuentra en la raìz del back `query_ecotierra_bd.txt`, MySQL.
 
