@@ -1,5 +1,9 @@
 # BACKEND LARAVEL
 
+# Levantar servidor BD
+
+Se debe utlizar wampp o xampp para levantar el servidor donde tendremos la BD localmente, al levantar el servidor ejecutar el query correspondiente.
+
 # Query base de datos ó migracion laravel
 
 Se puede realizar la migracion (php aritsan migrate:fresh --seed) ó ejecutar el query se encuentra en la raìz del back `query_ecotierra_bd.txt`, MySQL.
